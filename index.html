@@ -1,920 +1,816 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="./Images/favicon-icons/apple-touch-icon.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="./Images/favicon-icons/favicon-32x32.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="./Images/favicon-icons/favicon-16x16.png"
-    />
-    <link rel="manifest" href="./Images/favicon-icons/site.webmanifest" />
-    <link
-      rel="mask-icon"
-      href="./Images/favicon-icons/safari-pinned-tab.svg"
-      color="#5bbad5"
-    />
-    <meta name="msapplication-TileColor" content="#da532c" />
-    <meta name="theme-color" content="#ffffff" />
-    <title>MYT</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
-      crossorigin="anonymous"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,600;0,700;1,400&display=swap"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Geologica:wght@700&display=swap"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Spartan:wght@600;700&display=swap"
-    />
-    <!-- Link Swiper's CSS -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
-    />
-    <link rel="stylesheet" href="./style.css" />
-  </head>
-  <body>
-    <!-- Header Html Start Here  -->
-    <div id="overlay-bg">
-      <header>
-        <div class="container">
-          <div class="row align-items-center">
-            <div class="col-8 d-flex">
-              <div class="header-logo">
-                <img src="./Images/Manage-trip-logo.png" alt="header_logo" />
-              </div>
-              <div class="header-links">
-                <ul class="d-flex">
-                  <li>
-                    <a href="#" class="text-decoration-none">Our clients</a>
-                  </li>
-                  <li>
-                    <a href="#" class="text-decoration-none">What we do</a>
-                  </li>
-                  <li><a href="#" class="text-decoration-none">About us</a></li>
-                  <li><a href="#" class="text-decoration-none">Contact</a></li>
-                </ul>
-              </div>
+
+<head>
+
+  <!-- Google Tag Manager -->
+  <script>(function (w, d, s, l, i) {
+      w[l] = w[l] || []; w[l].push({
+        'gtm.start':
+          new Date().getTime(), event: 'gtm.js'
+      }); var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+          'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-NJWD4N4');</script>
+  <!-- End Google Tag Manager -->
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="apple-touch-icon" sizes="180x180" href="./Images/favicon-icons/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="./Images/favicon-icons/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="./Images/favicon-icons/favicon-16x16.png" />
+  <link rel="manifest" href="./Images/favicon-icons/site.webmanifest" />
+  <link rel="mask-icon" href="./Images/favicon-icons/safari-pinned-tab.svg" color="#5bbad5" />
+  <meta name="msapplication-TileColor" content="#da532c" />
+  <meta name="theme-color" content="#ffffff" />
+  <title>MYT</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,600;0,700;1,400&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geologica:wght@700&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Spartan:wght@600;700&display=swap" />
+  <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="./style.css" />
+</head>
+
+<body>
+  <!-- Header Html Start Here  -->
+  <div id="overlay-bg">
+    <header>
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-8 d-flex">
+            <div class="header-logo">
+              <img src="./Images/Manage-trip-logo.png" alt="header_logo" />
             </div>
-            <div class="hamburger col-4">
-              <svg
-                class="ham hamRotate ham1"
-                viewBox="0 0 100 100"
-                width="80"
-                onclick="this.classList.toggle('active')"
-              >
-                <path
-                  class="line top"
-                  d="m 30,33 h 40 c 0,0 9.044436,-0.654587 9.044436,-8.508902 0,-7.854315 -8.024349,-11.958003 -14.89975,-10.85914 -6.875401,1.098863 -13.637059,4.171617 -13.637059,16.368042 v 40"
-                />
-                <path class="line middle" d="m 30,50 h 40" />
-                <path
-                  class="line bottom"
-                  d="m 30,67 h 40 c 12.796276,0 15.357889,-11.717785 15.357889,-26.851538 0,-15.133752 -4.786586,-27.274118 -16.667516,-27.274118 -11.88093,0 -18.499247,6.994427 -18.435284,17.125656 l 0.252538,40"
-                />
-              </svg>
-            </div>
-            <div class="col-4 book-demo-btn d-flex justify-content-end">
-              <a
-                href="https://manageyourtrip.typeform.com/to/hSnHGaEQ"
-                class="book-demo text-decoration-none"
-                >Book Your Demo</a
-              >
-            </div>
-            <div class="hamburger-menu">
-              <ul class="d-flex flex-column">
+            <div class="header-links">
+              <ul class="d-flex">
                 <li>
                   <a href="#" class="text-decoration-none">Our clients</a>
                 </li>
-                <li><a href="#" class="text-decoration-none">What we do</a></li>
+                <li>
+                  <a href="#" class="text-decoration-none">What we do</a>
+                </li>
                 <li><a href="#" class="text-decoration-none">About us</a></li>
                 <li><a href="#" class="text-decoration-none">Contact</a></li>
               </ul>
             </div>
           </div>
+          <div class="hamburger col-4">
+            <svg class="ham hamRotate ham1" viewBox="0 0 100 100" width="80" onclick="this.classList.toggle('active')">
+              <path class="line top"
+                d="m 30,33 h 40 c 0,0 9.044436,-0.654587 9.044436,-8.508902 0,-7.854315 -8.024349,-11.958003 -14.89975,-10.85914 -6.875401,1.098863 -13.637059,4.171617 -13.637059,16.368042 v 40" />
+              <path class="line middle" d="m 30,50 h 40" />
+              <path class="line bottom"
+                d="m 30,67 h 40 c 12.796276,0 15.357889,-11.717785 15.357889,-26.851538 0,-15.133752 -4.786586,-27.274118 -16.667516,-27.274118 -11.88093,0 -18.499247,6.994427 -18.435284,17.125656 l 0.252538,40" />
+            </svg>
+          </div>
+          <div class="col-4 book-demo-btn d-flex justify-content-end">
+            <a href="https://manageyourtrip.typeform.com/to/hSnHGaEQ" class="book-demo text-decoration-none">Book Your
+              Demo</a>
+          </div>
+          <div class="hamburger-menu">
+            <ul class="d-flex flex-column">
+              <li>
+                <a href="#" class="text-decoration-none">Our clients</a>
+              </li>
+              <li><a href="#" class="text-decoration-none">What we do</a></li>
+              <li><a href="#" class="text-decoration-none">About us</a></li>
+              <li><a href="#" class="text-decoration-none">Contact</a></li>
+            </ul>
+          </div>
         </div>
-      </header>
-      <!-- Header Html End Here  -->
+      </div>
+    </header>
+    <!-- Header Html End Here  -->
 
-      <div class="overLay"></div>
+    <div class="overLay"></div>
 
-      <!-- Banner Html Start Here  -->
-      <div class="banner">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-7">
-              <h1>
-                Revolutionize Travel Management: Centralize & Automate with
-                Manage Your Trip!
-              </h1>
-              <br />
-              <h1 class="sec-heading">
-                The #1 Solution for Tour Operators & DMCs
-              </h1>
+    <!-- Banner Html Start Here  -->
+    <div class="banner">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-7">
+            <h1>
+              Revolutionize Travel Management: Centralize & Automate with
+              Manage Your Trip!
+            </h1>
+            <br />
+            <h1 class="sec-heading">
+              The #1 Solution for Tour Operators & DMCs
+            </h1>
+            <p>
+              Explore our software with a free, user-friendly demo, and we'll
+              show you how we've helped Tour Operators & DMCs worldwide
+              increase their efficiency by at least 35% and boost their
+              conversion rates in just 3 months!
+            </p>
+            <div class="text-center text-sm-start">
+              <a href="https://manageyourtrip.typeform.com/to/hSnHGaEQ"
+                class="banner-book-demo text-decoration-none">Book Your Demo</a>
+            </div>
+          </div>
+          <div class="col-lg-5">
+            <div class="banner-laptop d-none d-sm-block">
+              <img src="./Images/Laptop.svg" alt="hero-laptop" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Banner Html End Here  -->
+
+  <!-- Slider Html Start Here  -->
+  <div class="slider">
+    <div class="container text-center">
+      <div class="row align-items-center">
+        <div class="col-3">
+          <p>Trusted by Reputable clients</p>
+        </div>
+        <div class="col-9">
+          <div class="swiper logo-slider">
+            <div class="swiper-wrapper d-flex align-items-center">
+              <div class="swiper-slide">
+                <img src="./Images/Poland-logo.png" alt="poland-logo" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./Images/Touring-logo.png" alt="touring-logo" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./Images/Mije-logo.png" alt="mije-logo" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./Images/Easy-travel.png" alt="easy-travel" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./Images/Kenestours.png" alt="kenestours" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./Images/Poland-logo.png" alt="poland-logo" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./Images/Touring-logo.png" alt="touring-logo" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./Images/Mije-logo.png" alt="mije-logo" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./Images/Easy-travel.png" alt="easy-travel" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./Images/Kenestours.png" alt="kenestours" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- <div class="mb-5"><h1>Trusted by Reputable clients</h1></div> -->
+    </div>
+  </div>
+  <!-- Slider Html End Here  -->
+
+  <!-- Operation Html Start Here  -->
+  <div class="operation">
+    <div class="container">
+      <div class="operation-header text-center">
+        <h1>Simplify your operation</h1>
+      </div>
+      <div class="tool">
+        <div class="row">
+          <div class="col-12 col-lg-3 col-md-6">
+            <div class="opera-iocn">
+              <div class="inner-icon">
+                <img src="./Images/Planet.svg" alt="planet" />
+              </div>
+            </div>
+            <div class="opera-info">
+              <h4>Itinerary Builder</h4>
               <p>
-                Explore our software with a free, user-friendly demo, and we'll
-                show you how we've helped Tour Operators & DMCs worldwide
-                increase their efficiency by at least 35% and boost their
-                conversion rates in just 3 months!
+                Centralized and Organized your content, for faster itinerary
+                creation
               </p>
-              <div class="text-center text-sm-start">
-                <a
-                href="https://manageyourtrip.typeform.com/to/hSnHGaEQ"
-                class="banner-book-demo text-decoration-none"
-                >Book Your Demo</a
-              >
+            </div>
+          </div>
+          <div class="col-12 col-lg-3 col-md-6">
+            <div class="opera-iocn">
+              <div class="inner-icon">
+                <img src="./Images/Price-tag.svg" alt="planet" />
               </div>
             </div>
-            <div class="col-lg-5">
-              <div class="banner-laptop d-none d-sm-block">
-                <img src="./Images/Laptop.svg" alt="hero-laptop" />
+            <div class="opera-info">
+              <h4>Quotation Tool</h4>
+              <p>
+                Access your trip’s financial balance in real time, from
+                anywhere, anytime.
+              </p>
+            </div>
+          </div>
+          <div class="col-12 col-lg-3 col-md-6">
+            <div class="opera-iocn">
+              <div class="inner-icon">
+                <img src="./Images/Document-line.svg" alt="planet" />
               </div>
+            </div>
+            <div class="opera-info">
+              <h4>Document Generation</h4>
+              <p>
+                Generate itineraries, proposal, voucher and more with your
+                custom design with just one click!
+              </p>
+            </div>
+          </div>
+          <div class="col-12 col-lg-3 col-md-6">
+            <div class="opera-iocn">
+              <div class="inner-icon">
+                <img src="./Images/Baseline.svg" alt="planet" />
+              </div>
+            </div>
+            <div class="opera-info">
+              <h4>Operation & Logistics</h4>
+              <p>
+                Centralize all your operation in one place, manage your
+                supplier reservation and generate all your logistics reports
+                without any effort.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="row opera-2">
+          <div class="col-12 col-lg-3 col-md-6">
+            <div class="opera-iocn">
+              <div class="inner-icon">
+                <img src="./Images/Form-line.svg" alt="planet" />
+              </div>
+            </div>
+            <div class="opera-info">
+              <h4>Participant Registration</h4>
+              <p>
+                Generate online booking form & automate all your registration
+                process.
+              </p>
+            </div>
+          </div>
+          <div class="col-12 col-lg-3 col-md-6">
+            <div class="opera-iocn">
+              <div class="inner-icon">
+                <img src="./Images/Mdi-light.svg" alt="planet" />
+              </div>
+            </div>
+            <div class="opera-info">
+              <h4>Accounting</h4>
+              <p>
+                Create all your accounting documents, upload your supplier's
+                invoice to be able to centralize all your information and have
+                access to any documents within a few clicks
+              </p>
+            </div>
+          </div>
+          <div class="col-12 col-lg-3 col-md-6">
+            <div class="opera-iocn">
+              <div class="inner-icon">
+                <img src="./Images/Workflow.svg" alt="planet" />
+              </div>
+            </div>
+            <div class="opera-info">
+              <h4>Reports & Export to ERP</h4>
+              <p>
+                Let the system generate the reports you need to manage better
+                your company.
+              </p>
+            </div>
+          </div>
+          <div class="col-12 col-lg-3 col-md-6">
+            <div class="opera-iocn">
+              <div class="inner-icon">
+                <img src="./Images/Payment.svg" alt="planet" />
+              </div>
+            </div>
+            <div class="opera-info">
+              <h4>MYT API</h4>
+              <p>
+                Connect MYT to your website, your CRM or any solution via our
+                API!
+              </p>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <!-- Banner Html End Here  -->
+  </div>
+  <!-- Operation Html End Here  -->
 
-    <!-- Slider Html Start Here  -->
-    <div class="slider">
-      <div class="container text-center">
-        <div class="row align-items-center">
-          <div class="col-3"><p>Trusted by Reputable clients</p></div>
-          <div class="col-9">
-            <div class="swiper logo-slider">
-              <div class="swiper-wrapper d-flex align-items-center">
-                <div class="swiper-slide">
-                  <img src="./Images/Poland-logo.png" alt="poland-logo" />
-                </div>
-                <div class="swiper-slide">
-                  <img src="./Images/Touring-logo.png" alt="touring-logo" />
-                </div>
-                <div class="swiper-slide">
-                  <img src="./Images/Mije-logo.png" alt="mije-logo" />
-                </div>
-                <div class="swiper-slide">
-                  <img src="./Images/Easy-travel.png" alt="easy-travel" />
-                </div>
-                <div class="swiper-slide">
-                  <img src="./Images/Kenestours.png" alt="kenestours" />
-                </div>
-                <div class="swiper-slide">
-                  <img src="./Images/Poland-logo.png" alt="poland-logo" />
-                </div>
-                <div class="swiper-slide">
-                  <img src="./Images/Touring-logo.png" alt="touring-logo" />
-                </div>
-                <div class="swiper-slide">
-                  <img src="./Images/Mije-logo.png" alt="mije-logo" />
-                </div>
-                <div class="swiper-slide">
-                  <img src="./Images/Easy-travel.png" alt="easy-travel" />
-                </div>
-                <div class="swiper-slide">
-                  <img src="./Images/Kenestours.png" alt="kenestours" />
-                </div>
-              </div>
+  <!-- Boost Html Start Here  -->
+  <div class="boost common">
+    <div class="container">
+      <div class="row common-inner">
+        <div class="col-12 text-center">
+          <h1>Why us</h1>
+        </div>
+        <div class="col-lg-6 col-12">
+          <div class="automation">AUTOMATION</div>
+          <div class="boost-header">Amplify Efficiency</div>
+          <ul class="ps-0">
+            <li class="d-flex">
+              <span><img src="./Images/Check-mark.svg" alt="check" /></span>
+              <p class="ps-2">
+                Save time through automatic proposal / itinerary production.
+              </p>
+            </li>
+            <li class="d-flex">
+              <span><img src="./Images/Check-mark.svg" alt="check" /></span>
+              <p class="ps-2">
+                Automate your itinerary creation process by using organized
+                content
+              </p>
+            </li>
+            <li class="d-flex">
+              <span><img src="./Images/Check-mark.svg" alt="check" /></span>
+              <p class="ps-2">
+                Increase conversion rate through a rich variety of attractive
+                templates.
+              </p>
+            </li>
+          </ul>
+          <div class="learn d-flex">
+            <a href="https://docs.google.com/document/d/1DZIKyBGMS_iuC8jbZRf8DWDytfH-PazrNWPaC0rVo8E/edit?usp=sharing"
+              target="_blank" rel="noopener"><span>Learn more</span><img src="./Images/navigation.svg"
+                alt="navigation" /></a>
+          </div>
+        </div>
+        <div class="col-lg-6 col-12">
+          <div class="common-opposite d-none d-sm-flex justify-lg-content-end justify-content-center mt-5 mt-lg-0">
+            <div class="common-inner-1">
+              <img src="./Images/Basek.jpg" alt="basek" class="common-inner-2" />
+              <img src="./Images/report-chart.svg" alt="report-chart" class="common-inner-3" />
             </div>
           </div>
         </div>
-        <!-- <div class="mb-5"><h1>Trusted by Reputable clients</h1></div> -->
       </div>
     </div>
-    <!-- Slider Html End Here  -->
+  </div>
+  <!-- Boost Html End Here  -->
 
-    <!-- Operation Html Start Here  -->
-    <div class="operation">
+  <!-- Connect Html Start Here  -->
+  <div class="connect common">
+    <div class="container">
+      <div class="row common-inner">
+        <div class="col-lg-6 col-12">
+          <div class="common-opposite d-none d-sm-flex justify-lg-content-end justify-content-center mt-5 mt-lg-0">
+            <div class="common-inner-1">
+              <img src="./Images/Basek2.jpg" alt="basek2" class="common-inner-2" />
+              <img src="./Images/connect.svg" alt="report-chart" class="common-inner-3" />
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 col-12 mt-5 mt-lg-0">
+          <div class="automation">CONNECTIVITY</div>
+          <div class="boost-header">
+            Seamless Website and Software Integration!
+          </div>
+          <ul class="ps-0">
+            <li class="d-flex">
+              <span><img src="./Images/Check-mark.svg" alt="check" /></span>
+              <p class="ps-2">
+                Link MYT to your CRM or any external software using our API &
+                Webhooks
+              </p>
+            </li>
+            <li class="d-flex">
+              <span><img src="./Images/Check-mark.svg" alt="check" /></span>
+              <p class="ps-2">
+                Connect MYT to your Accounting Software to avoid manual
+                entries
+              </p>
+            </li>
+            <li class="d-flex">
+              <span><img src="./Images/Check-mark.svg" alt="check" /></span>
+              <p class="ps-2">
+                MYT can function as the website's backend, connecting and
+                integrating with it.
+              </p>
+            </li>
+          </ul>
+          <div class="learn d-flex">
+            <a href="https://docs.google.com/document/d/1DZIKyBGMS_iuC8jbZRf8DWDytfH-PazrNWPaC0rVo8E/edit?usp=sharing"
+              target="_blank" rel="noopener"><span>Learn more</span><img src="./Images/navigation.svg"
+                alt="navigation" /></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Connect Html End Here  -->
+
+  <!-- Process Html Start Here  -->
+  <div class="process common">
+    <div class="container">
+      <div class="row common-inner">
+        <div class="col-lg-6 col-12">
+          <div class="automation">CENTRALIZATION</div>
+          <div class="boost-header">Unlock Centralization</div>
+          <ul class="ps-0">
+            <li class="d-flex">
+              <span><img src="./Images/Check-mark.svg" alt="check" /></span>
+              <p class="ps-2">
+                Streamline operations and access your data quickly, reducing
+                time wasted on manual tasks
+              </p>
+            </li>
+            <li class="d-flex">
+              <span><img src="./Images/Check-mark.svg" alt="check" /></span>
+              <p class="ps-2">
+                Ensure data consistency and eliminate errors through
+                centralized control.
+              </p>
+            </li>
+            <li class="d-flex">
+              <span><img src="./Images/Check-mark.svg" alt="check" /></span>
+              <p class="ps-2">
+                Insights: Uncover valuable insights by analyzing real-time &
+                accurate reports in one place.
+              </p>
+            </li>
+          </ul>
+          <div class="learn d-flex">
+            <a href="https://docs.google.com/document/d/1DZIKyBGMS_iuC8jbZRf8DWDytfH-PazrNWPaC0rVo8E/edit?usp=sharing"
+              target="_blank" rel="noopener"><span>Learn more</span><img src="./Images/navigation.svg"
+                alt="navigation" /></a>
+          </div>
+        </div>
+        <div class="col-lg-6 col-12">
+          <div class="common-opposite d-none d-sm-flex justify-lg-content-end justify-content-center mt-5 mt-lg-0">
+            <div class="common-inner-1">
+              <img src="./Images/Unlock-Centralization.jpg" alt="basek2" class="common-inner-2" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Process Html End Here  -->
+
+  <!-- MYT Html Start Here  -->
+  <div class="position-relative">
+    <div class="myt">
       <div class="container">
-        <div class="operation-header text-center">
-          <h1>Simplify your operation</h1>
-        </div>
-        <div class="tool">
-          <div class="row">
-            <div class="col-12 col-lg-3 col-md-6">
-              <div class="opera-iocn">
-                <div class="inner-icon">
-                  <img src="./Images/Planet.svg" alt="planet" />
-                </div>
-              </div>
-              <div class="opera-info">
-                <h4>Itinerary Builder</h4>
-                <p>
-                  Centralized and Organized your content, for faster itinerary
-                  creation
-                </p>
-              </div>
-            </div>
-            <div class="col-12 col-lg-3 col-md-6">
-              <div class="opera-iocn">
-                <div class="inner-icon">
-                  <img src="./Images/Price-tag.svg" alt="planet" />
-                </div>
-              </div>
-              <div class="opera-info">
-                <h4>Quotation Tool</h4>
-                <p>
-                  Access your trip’s financial balance in real time, from
-                  anywhere, anytime.
-                </p>
-              </div>
-            </div>
-            <div class="col-12 col-lg-3 col-md-6">
-              <div class="opera-iocn">
-                <div class="inner-icon">
-                  <img src="./Images/Document-line.svg" alt="planet" />
-                </div>
-              </div>
-              <div class="opera-info">
-                <h4>Document Generation</h4>
-                <p>
-                  Generate itineraries, proposal, voucher and more with your
-                  custom design with just one click!
-                </p>
-              </div>
-            </div>
-            <div class="col-12 col-lg-3 col-md-6">
-              <div class="opera-iocn">
-                <div class="inner-icon">
-                  <img src="./Images/Baseline.svg" alt="planet" />
-                </div>
-              </div>
-              <div class="opera-info">
-                <h4>Operation & Logistics</h4>
-                <p>
-                  Centralize all your operation in one place, manage your
-                  supplier reservation and generate all your logistics reports
-                  without any effort.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="row opera-2">
-            <div class="col-12 col-lg-3 col-md-6">
-              <div class="opera-iocn">
-                <div class="inner-icon">
-                  <img src="./Images/Form-line.svg" alt="planet" />
-                </div>
-              </div>
-              <div class="opera-info">
-                <h4>Participant Registration</h4>
-                <p>
-                  Generate online booking form & automate all your registration
-                  process.
-                </p>
-              </div>
-            </div>
-            <div class="col-12 col-lg-3 col-md-6">
-              <div class="opera-iocn">
-                <div class="inner-icon">
-                  <img src="./Images/Mdi-light.svg" alt="planet" />
-                </div>
-              </div>
-              <div class="opera-info">
-                <h4>Accounting</h4>
-                <p>
-                  Create all your accounting documents, upload your supplier's
-                  invoice to be able to centralize all your information and have
-                  access to any documents within a few clicks
-                </p>
-              </div>
-            </div>
-            <div class="col-12 col-lg-3 col-md-6">
-              <div class="opera-iocn">
-                <div class="inner-icon">
-                  <img src="./Images/Workflow.svg" alt="planet" />
-                </div>
-              </div>
-              <div class="opera-info">
-                <h4>Reports & Export to ERP</h4>
-                <p>
-                  Let the system generate the reports you need to manage better
-                  your company.
-                </p>
-              </div>
-            </div>
-            <div class="col-12 col-lg-3 col-md-6">
-              <div class="opera-iocn">
-                <div class="inner-icon">
-                  <img src="./Images/Payment.svg" alt="planet" />
-                </div>
-              </div>
-              <div class="opera-info">
-                <h4>MYT API</h4>
-                <p>
-                  Connect MYT to your website, your CRM or any solution via our
-                  API!
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Operation Html End Here  -->
-
-    <!-- Boost Html Start Here  -->
-    <div class="boost common">
-      <div class="container">
-        <div class="row common-inner">
-          <div class="col-12 text-center">
-            <h1>Why us</h1>
-          </div>
-          <div class="col-lg-6 col-12">
-            <div class="automation">AUTOMATION</div>
-            <div class="boost-header">Amplify Efficiency</div>
-            <ul class="ps-0">
-              <li class="d-flex">
-                <span><img src="./Images/Check-mark.svg" alt="check" /></span>
-                <p class="ps-2">
-                  Save time through automatic proposal / itinerary production.
-                </p>
-              </li>
-              <li class="d-flex">
-                <span><img src="./Images/Check-mark.svg" alt="check" /></span>
-                <p class="ps-2">
-                  Automate your itinerary creation process by using organized
-                  content
-                </p>
-              </li>
-              <li class="d-flex">
-                <span><img src="./Images/Check-mark.svg" alt="check" /></span>
-                <p class="ps-2">
-                  Increase conversion rate through a rich variety of attractive
-                  templates.
-                </p>
-              </li>
-            </ul>
-            <div class="learn d-flex">
-              <a
-                href="https://docs.google.com/document/d/1DZIKyBGMS_iuC8jbZRf8DWDytfH-PazrNWPaC0rVo8E/edit?usp=sharing"
-                target="_blank"
-                rel="noopener"
-                ><span>Learn more</span
-                ><img src="./Images/navigation.svg" alt="navigation"
-              /></a>
-            </div>
-          </div>
-          <div class="col-lg-6 col-12">
-            <div
-              class="common-opposite d-none d-sm-flex justify-lg-content-end justify-content-center mt-5 mt-lg-0"
-            >
-              <div class="common-inner-1">
-                <img
-                  src="./Images/Basek.jpg"
-                  alt="basek"
-                  class="common-inner-2"
-                />
-                <img
-                  src="./Images/report-chart.svg"
-                  alt="report-chart"
-                  class="common-inner-3"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Boost Html End Here  -->
-
-    <!-- Connect Html Start Here  -->
-    <div class="connect common">
-      <div class="container">
-        <div class="row common-inner">
-          <div class="col-lg-6 col-12">
-            <div
-              class="common-opposite d-none d-sm-flex justify-lg-content-end justify-content-center mt-5 mt-lg-0"
-            >
-              <div class="common-inner-1">
-                <img
-                  src="./Images/Basek2.jpg"
-                  alt="basek2"
-                  class="common-inner-2"
-                />
-                <img
-                  src="./Images/connect.svg"
-                  alt="report-chart"
-                  class="common-inner-3"
-                />
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-6 col-12 mt-5 mt-lg-0">
-            <div class="automation">CONNECTIVITY</div>
-            <div class="boost-header">
-              Seamless Website and Software Integration!
-            </div>
-            <ul class="ps-0">
-              <li class="d-flex">
-                <span><img src="./Images/Check-mark.svg" alt="check" /></span>
-                <p class="ps-2">
-                  Link MYT to your CRM or any external software using our API &
-                  Webhooks
-                </p>
-              </li>
-              <li class="d-flex">
-                <span><img src="./Images/Check-mark.svg" alt="check" /></span>
-                <p class="ps-2">
-                  Connect MYT to your Accounting Software to avoid manual
-                  entries
-                </p>
-              </li>
-              <li class="d-flex">
-                <span><img src="./Images/Check-mark.svg" alt="check" /></span>
-                <p class="ps-2">
-                  MYT can function as the website's backend, connecting and
-                  integrating with it.
-                </p>
-              </li>
-            </ul>
-            <div class="learn d-flex">
-              <a
-                href="https://docs.google.com/document/d/1DZIKyBGMS_iuC8jbZRf8DWDytfH-PazrNWPaC0rVo8E/edit?usp=sharing"
-                target="_blank"
-                rel="noopener"
-                ><span>Learn more</span
-                ><img src="./Images/navigation.svg" alt="navigation"
-              /></a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Connect Html End Here  -->
-
-    <!-- Process Html Start Here  -->
-    <div class="process common">
-      <div class="container">
-        <div class="row common-inner">
-          <div class="col-lg-6 col-12">
-            <div class="automation">CENTRALIZATION</div>
-            <div class="boost-header">Unlock Centralization</div>
-            <ul class="ps-0">
-              <li class="d-flex">
-                <span><img src="./Images/Check-mark.svg" alt="check" /></span>
-                <p class="ps-2">
-                  Streamline operations and access your data quickly, reducing
-                  time wasted on manual tasks
-                </p>
-              </li>
-              <li class="d-flex">
-                <span><img src="./Images/Check-mark.svg" alt="check" /></span>
-                <p class="ps-2">
-                  Ensure data consistency and eliminate errors through
-                  centralized control.
-                </p>
-              </li>
-              <li class="d-flex">
-                <span><img src="./Images/Check-mark.svg" alt="check" /></span>
-                <p class="ps-2">
-                  Insights: Uncover valuable insights by analyzing real-time &
-                  accurate reports in one place.
-                </p>
-              </li>
-            </ul>
-            <div class="learn d-flex">
-              <a
-                href="https://docs.google.com/document/d/1DZIKyBGMS_iuC8jbZRf8DWDytfH-PazrNWPaC0rVo8E/edit?usp=sharing"
-                target="_blank"
-                rel="noopener"
-                ><span>Learn more</span
-                ><img src="./Images/navigation.svg" alt="navigation"
-              /></a>
-            </div>
-          </div>
-          <div class="col-lg-6 col-12">
-            <div
-              class="common-opposite d-none d-sm-flex justify-lg-content-end justify-content-center mt-5 mt-lg-0"
-            >
-              <div class="common-inner-1">
-                <img
-                  src="./Images/Unlock-Centralization.jpg"
-                  alt="basek2"
-                  class="common-inner-2"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Process Html End Here  -->
-
-    <!-- MYT Html Start Here  -->
-    <div class="position-relative">
-      <div class="myt">
-        <div class="container">
-          <div class="row justify-content-center">
-            <div class="col-12 col-lg-6 d-flex align-items-center">
-              <div class="myt-inner-1">
-                <p class="mb-0">
-                  <q>The MYT solution was above everything else we've seen at the
+        <div class="row justify-content-center">
+          <div class="col-12 col-lg-6 d-flex align-items-center">
+            <div class="myt-inner-1">
+              <p class="mb-0">
+                <q>The MYT solution was above everything else we've seen at the
                   time, and was built to adapt to the complexity of our
                   different business. We were among the first in France, and we
                   have now a software that help us to improve our ways</q>
-                </p>
-                <p class="mb-0 mt-4">Nicolas Derosier</p>
-                <p class="mb-0">Mije France</p>
-              </div>
-            </div>
-
-            <div class="col-12 col-lg-6">
-              <div
-                class="myt-inner-2 d-flex justify-content-center mt-4 mt-lg-0 justify-content-lg-end"
-              >
-                <iframe
-                  width="80%"
-                  height="100%"
-                  src="https://www.youtube.com/embed/L1PRMFuRmok?si=t3jLbvZg4p2Y255f"
-                  title="YouTube video player"
-                  frameborder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  allowfullscreen
-                ></iframe>
-                <!-- <button> <img src="./Images/play.svg" alt="play" class="play" /></button> -->
-              </div>
+              </p>
+              <p class="mb-0 mt-4">Nicolas Derosier</p>
+              <p class="mb-0">Mije France</p>
             </div>
           </div>
-        </div>
-      </div>
-      <!-- <iframe width="80%" height="100%" src="https://www.youtube.com/embed/L1PRMFuRmok?si=t3jLbvZg4p2Y255f" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> -->
-      <!-- MYT Html End Here  -->
-      <div class="second-overlay"></div>
-      <!-- Industry Slider Html Start Here  -->
-      <div class="industry">
-        <div class="container">
-          <div class="industry-header d-flex justify-content-between">
-            <p>Cherished by Industry Leaders</p>
-            <div class="arrow d-flex">
-              <button>
-                <img
-                  src="./Images/left-navi.svg"
-                  alt="left-navi"
-                  class="prev-arrow"
-                />
-              </button>
-              <button>
-                <img
-                  src="./Images/right-navi.svg"
-                  alt="right-navi.svg-navi"
-                  class="next-arrow"
-                />
-              </button>
-            </div>
-          </div>
-          <div class="row mt-5">
-            <div class="swiper mySwiper2">
-              <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                  <div class="card1">
-                    <p><img src="./Images/star.svg" alt="star" /></p>
-                    <p class="slider-content">
-                      “Using your system, we are able to have everything in one
-                      place. We are able to identify on what date we sent the
-                      quote, and when it was updated; so it’s a pretty complex
-                      system but when you train on it you realize how efficient
-                      it makes you… now, if a client calls us, we are able to
-                      give a 24-hour response, while initially it would have
-                      taken 5,6, even 7 days sometimes, and people would get
-                      frustrated waiting for us.”
-                    </p>
 
-                    <div class="d-flex align-items-center inner-info">
-                      <!-- <img src="./Images/eyal.svg" alt="shery" /> -->
-                      <div class="ps-2">
-                        <p class="mb-0">
-                          <b> Sheri</b> <br />
-                          A&S Siganture Jourmeys
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="card1">
-                    <p><img src="./Images/star.svg" alt="star" /></p>
-                    <p class="slider-content">
-                      “Using your system, we are able to have everything in one
-                      place. We are able to identify on what date we sent the
-                      quote, and when it was updated; so it’s a pretty complex
-                      system but when you train on it you realize how efficient
-                      it makes you… now, if a client calls us, we are able to
-                      give a 24-hour response, while initially it would have
-                      taken 5,6, even 7 days sometimes, and people would get
-                      frustrated waiting for us.”
-                    </p>
-
-                    <div class="d-flex align-items-center inner-info">
-                      <!-- <img src="./Images/shery.svg" alt="shery" /> -->
-                      <div class="ps-2">
-                        <p class="mb-0">
-                          <b> Sheri</b> <br />
-                          A&S Siganture Jourmeys
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="card1">
-                    <p><img src="./Images/star.svg" alt="star" /></p>
-                    <p class="slider-content">
-                      “Using your system, we are able to have everything in one
-                      place. We are able to identify on what date we sent the
-                      quote, and when it was updated; so it’s a pretty complex
-                      system but when you train on it you realize how efficient
-                      it makes you… now, if a client calls us, we are able to
-                      give a 24-hour response, while initially it would have
-                      taken 5,6, even 7 days sometimes, and people would get
-                      frustrated waiting for us.”
-                    </p>
-
-                    <div class="d-flex align-items-center inner-info">
-                      <!-- <img src="./Images/eyal.svg" alt="shery" /> -->
-                      <div class="ps-2">
-                        <p class="mb-0">
-                          <b> Sheri</b> <br />
-                          A&S Siganture Jourmeys
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="card1">
-                    <p><img src="./Images/star.svg" alt="star" /></p>
-                    <p class="slider-content">
-                      “Using your system, we are able to have everything in one
-                      place. We are able to identify on what date we sent the
-                      quote, and when it was updated; so it’s a pretty complex
-                      system but when you train on it you realize how efficient
-                      it makes you… now, if a client calls us, we are able to
-                      give a 24-hour response, while initially it would have
-                      taken 5,6, even 7 days sometimes, and people would get
-                      frustrated waiting for us.”
-                    </p>
-
-                    <div class="d-flex align-items-center inner-info">
-                      <!-- <img src="./Images/shery.svg" alt="shery" /> -->
-                      <div class="ps-2">
-                        <p class="mb-0">
-                          <b> Sheri</b> <br />
-                          A&S Siganture Jourmeys
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+          <div class="col-12 col-lg-6">
+            <div class="myt-inner-2 d-flex justify-content-center mt-4 mt-lg-0 justify-content-lg-end">
+              <iframe width="80%" height="100%" src="https://www.youtube.com/embed/L1PRMFuRmok?si=t3jLbvZg4p2Y255f"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe>
+              <!-- <button> <img src="./Images/play.svg" alt="play" class="play" /></button> -->
             </div>
           </div>
         </div>
       </div>
     </div>
-    <!-- Industry Slider Html End Here  -->
-
-    <!-- Founder Html Start Here  -->
-    <div class="founder">
+    <!-- <iframe width="80%" height="100%" src="https://www.youtube.com/embed/L1PRMFuRmok?si=t3jLbvZg4p2Y255f" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> -->
+    <!-- MYT Html End Here  -->
+    <div class="second-overlay"></div>
+    <!-- Industry Slider Html Start Here  -->
+    <div class="industry">
       <div class="container">
-        <div class="row">
-          <div class="col-lg-6 col-12 founder-inner-1">
-            <p class="mb-0">Our Founder & CEO</p>
-            <p class="second-info">
-              I founded MYT in 2012, after my years as a tour guide in Israel
-              showed me the stress and disorganization that plagued tour
-              operators Determined to solve this pain, I earned first my
-              Computer Science Degree, to develop a Tour Operator solution, and
-              then my MBA, to be able to manage the company. As of today, MYT
-              has raised around $5M, with many of our investor's key players in
-              the tourism industry. We have conducted 4 years of R&D to better
-              understand the needs of tour operators and developed a strong
-              solution for them. After launching our commercial solution in
-              2018, we now have 60 clients worldwide.
-            </p>
-            <p class="founder-name">Raphael Amzallag</p>
+        <div class="industry-header d-flex justify-content-between">
+          <p>Cherished by Industry Leaders</p>
+          <div class="arrow d-flex">
+            <button>
+              <img src="./Images/left-navi.svg" alt="left-navi" class="prev-arrow" />
+            </button>
+            <button>
+              <img src="./Images/right-navi.svg" alt="right-navi.svg-navi" class="next-arrow" />
+            </button>
           </div>
-          <div
-            class="col-lg-6 col-12 mt-5 mt-lg-0 founder-inner-2 d-none d-sm-flex justify-content-lg-end justify-content-center"
-          >
-            <img src="./Images/User1.png" alt="user" />
+        </div>
+        <div class="row mt-5">
+          <div class="swiper mySwiper2">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="card1">
+                  <p><img src="./Images/star.svg" alt="star" /></p>
+                  <p class="slider-content">
+                    “Using your system, we are able to have everything in one
+                    place. We are able to identify on what date we sent the
+                    quote, and when it was updated; so it’s a pretty complex
+                    system but when you train on it you realize how efficient
+                    it makes you… now, if a client calls us, we are able to
+                    give a 24-hour response, while initially it would have
+                    taken 5,6, even 7 days sometimes, and people would get
+                    frustrated waiting for us.”
+                  </p>
+
+                  <div class="d-flex align-items-center inner-info">
+                    <!-- <img src="./Images/eyal.svg" alt="shery" /> -->
+                    <div class="ps-2">
+                      <p class="mb-0">
+                        <b> Sheri</b> <br />
+                        A&S Siganture Jourmeys
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="card1">
+                  <p><img src="./Images/star.svg" alt="star" /></p>
+                  <p class="slider-content">
+                    “Using your system, we are able to have everything in one
+                    place. We are able to identify on what date we sent the
+                    quote, and when it was updated; so it’s a pretty complex
+                    system but when you train on it you realize how efficient
+                    it makes you… now, if a client calls us, we are able to
+                    give a 24-hour response, while initially it would have
+                    taken 5,6, even 7 days sometimes, and people would get
+                    frustrated waiting for us.”
+                  </p>
+
+                  <div class="d-flex align-items-center inner-info">
+                    <!-- <img src="./Images/shery.svg" alt="shery" /> -->
+                    <div class="ps-2">
+                      <p class="mb-0">
+                        <b> Sheri</b> <br />
+                        A&S Siganture Jourmeys
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="card1">
+                  <p><img src="./Images/star.svg" alt="star" /></p>
+                  <p class="slider-content">
+                    “Using your system, we are able to have everything in one
+                    place. We are able to identify on what date we sent the
+                    quote, and when it was updated; so it’s a pretty complex
+                    system but when you train on it you realize how efficient
+                    it makes you… now, if a client calls us, we are able to
+                    give a 24-hour response, while initially it would have
+                    taken 5,6, even 7 days sometimes, and people would get
+                    frustrated waiting for us.”
+                  </p>
+
+                  <div class="d-flex align-items-center inner-info">
+                    <!-- <img src="./Images/eyal.svg" alt="shery" /> -->
+                    <div class="ps-2">
+                      <p class="mb-0">
+                        <b> Sheri</b> <br />
+                        A&S Siganture Jourmeys
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="card1">
+                  <p><img src="./Images/star.svg" alt="star" /></p>
+                  <p class="slider-content">
+                    “Using your system, we are able to have everything in one
+                    place. We are able to identify on what date we sent the
+                    quote, and when it was updated; so it’s a pretty complex
+                    system but when you train on it you realize how efficient
+                    it makes you… now, if a client calls us, we are able to
+                    give a 24-hour response, while initially it would have
+                    taken 5,6, even 7 days sometimes, and people would get
+                    frustrated waiting for us.”
+                  </p>
+
+                  <div class="d-flex align-items-center inner-info">
+                    <!-- <img src="./Images/shery.svg" alt="shery" /> -->
+                    <div class="ps-2">
+                      <p class="mb-0">
+                        <b> Sheri</b> <br />
+                        A&S Siganture Jourmeys
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
-    <!-- Founder Html End Here  -->
+  </div>
+  <!-- Industry Slider Html End Here  -->
 
-    <!-- Business Html Start Here  -->
-    <div class="business">
-      <div class="business-bg d-flex justify-content-center align-items-center">
-        <img src="./Images/report-chart2.svg" alt="connect" class="connect" />
-        <div class="text-center w-50">
-          <p>Ready to take your business to the next level?</p>
-          <a
-            href="https://manageyourtrip.typeform.com/to/hSnHGaEQ"
-            class="book-demo text-decoration-none"
-            rel="noopener"
-            >Book Your Demo</a
-          >
+  <!-- Founder Html Start Here  -->
+  <div class="founder">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 col-12 founder-inner-1">
+          <p class="mb-0">Our Founder & CEO</p>
+          <p class="second-info">
+            I founded MYT in 2012, after my years as a tour guide in Israel
+            showed me the stress and disorganization that plagued tour
+            operators Determined to solve this pain, I earned first my
+            Computer Science Degree, to develop a Tour Operator solution, and
+            then my MBA, to be able to manage the company. As of today, MYT
+            has raised around $5M, with many of our investor's key players in
+            the tourism industry. We have conducted 4 years of R&D to better
+            understand the needs of tour operators and developed a strong
+            solution for them. After launching our commercial solution in
+            2018, we now have 60 clients worldwide.
+          </p>
+          <p class="founder-name">Raphael Amzallag</p>
         </div>
-        <img
-          src="./Images/report-chart.svg"
-          alt="report-chart"
-          class="report"
-        />
+        <div
+          class="col-lg-6 col-12 mt-5 mt-lg-0 founder-inner-2 d-none d-sm-flex justify-content-lg-end justify-content-center">
+          <img src="./Images/User1.png" alt="user" />
+        </div>
       </div>
     </div>
-    <!-- Bussiness Html End Here  -->
+  </div>
+  <!-- Founder Html End Here  -->
 
-    <!-- Footer Html End Here  -->
-    <footer>
-      <div class="container">
-        <div class="row">
-          <div
-            class="footer-inner-1 col-xl-9 col-lg-8 col-md-6 col-12 px-4 px-md-0 d-grid d-sm-block"
-            style="place-items: center;"
-          >
-            <img
-              src="./Images/Manage-trip-logo.png"
-              alt="manage-trip"
-              class="manage-logo"
-            />
-            <p class="pb-2 pt-3 mb-0 current-year text-start"></p>
-            <p class="">All rights reserved</p>
-            <ul class="d-flex ps-0 mt-sm-5 mt-2">
-              <li>
-                <a
-                  href="https://www.facebook.com/Organizedtourismmarket/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  ><img src="./Images/facebook.svg" alt="facebook"
-                /></a>
-              </li>
-              <li class="px-4">
-                <a href="https://www.linkedin.com/company/manage-your-trip/?originalSubdomain=il" target="_blank" rel="noopener noreferrer"
-                  ><img src="./Images/linked.svg" alt="linked"
-                /></a>
-              </li>
-              <li>
-                <a href=" https://twitter.com/manageyourtrip?lang=en" target="_blank" rel="noopener noreferrer"
-                  ><img src="./Images/twitter.svg" alt="twitter"
-                /></a>
-              </li>
-              <li class="px-4">
-                <a href=" https://www.youtube.com/@manageyourtripltd.channel907" target="_blank" rel="noopener noreferrer"
-                  ><img src="./Images/youtube.svg" alt="youtube"
-                /></a>
-              </li>
+  <!-- Business Html Start Here  -->
+  <div class="business">
+    <div class="business-bg d-flex justify-content-center align-items-center">
+      <img src="./Images/report-chart2.svg" alt="connect" class="connect" />
+      <div class="text-center w-50">
+        <p>Ready to take your business to the next level?</p>
+        <a href="https://manageyourtrip.typeform.com/to/hSnHGaEQ" class="book-demo text-decoration-none"
+          rel="noopener">Book Your Demo</a>
+      </div>
+      <img src="./Images/report-chart.svg" alt="report-chart" class="report" />
+    </div>
+  </div>
+  <!-- Bussiness Html End Here  -->
+
+  <!-- Footer Html End Here  -->
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="footer-inner-1 col-xl-9 col-lg-8 col-md-6 col-12 px-4 px-md-0 d-grid d-sm-block"
+          style="place-items: center;">
+          <img src="./Images/Manage-trip-logo.png" alt="manage-trip" class="manage-logo" />
+          <p class="pb-2 pt-3 mb-0 current-year text-start"></p>
+          <p class="">All rights reserved</p>
+          <ul class="d-flex ps-0 mt-sm-5 mt-2">
+            <li>
+              <a href="https://www.facebook.com/Organizedtourismmarket/" target="_blank" rel="noopener noreferrer"><img
+                  src="./Images/facebook.svg" alt="facebook" /></a>
+            </li>
+            <li class="px-4">
+              <a href="https://www.linkedin.com/company/manage-your-trip/?originalSubdomain=il" target="_blank"
+                rel="noopener noreferrer"><img src="./Images/linked.svg" alt="linked" /></a>
+            </li>
+            <li>
+              <a href=" https://twitter.com/manageyourtrip?lang=en" target="_blank" rel="noopener noreferrer"><img
+                  src="./Images/twitter.svg" alt="twitter" /></a>
+            </li>
+            <li class="px-4">
+              <a href=" https://www.youtube.com/@manageyourtripltd.channel907" target="_blank"
+                rel="noopener noreferrer"><img src="./Images/youtube.svg" alt="youtube" /></a>
+            </li>
+          </ul>
+        </div>
+        <div class="d-flex footer-inner-2 justify-content-between col-xl-3 col-lg-4 col-md-6 col-12 px-4 px-md-0">
+          <div class="company">
+            <p>Company</p>
+            <ul class="ps-0">
+              <li class="pb-3"><a href="https://www.manageyourtrip.com" target="_blank" rel="noopener noreferrer"
+                  class="text-decoration-none inherit-clr">About Us</a></li>
+              <li class="pb-3"><a href="https://www.youtube.com/watch?v=uzzeDJVwHwI" target="_blank"
+                  rel="noopener noreferrer" class="text-decoration-none inherit-clr">Testimonials</a></li>
             </ul>
           </div>
-          <div
-            class="d-flex footer-inner-2 justify-content-between col-xl-3 col-lg-4 col-md-6 col-12 px-4 px-md-0"
-          >
-            <div class="company">
-              <p>Company</p>
-              <ul class="ps-0">
-                <li class="pb-3"><a href="https://www.manageyourtrip.com" target="_blank" rel="noopener noreferrer" class="text-decoration-none inherit-clr">About Us</a></li>
-                <li class="pb-3"><a href="https://www.youtube.com/watch?v=uzzeDJVwHwI" target="_blank" rel="noopener noreferrer" class="text-decoration-none inherit-clr">Testimonials</a></li>
-              </ul>
-            </div>
-            <div class="contact-us">
-              <p>Contact Us</p>
-              <ul class="ps-0">
-                <li class="pb-3">+972-73-7261200</li>
-                <li><a href="mailto:sales@manageyourtrip.com" target="_blank" rel="noopener noreferrer" class="text-decoration-none inherit-clr"> sales@manageyourtrip.com</a></li>
-              </ul>
-            </div>
+          <div class="contact-us">
+            <p>Contact Us</p>
+            <ul class="ps-0">
+              <li class="pb-3">+972-73-7261200</li>
+              <li><a href="mailto:sales@manageyourtrip.com" target="_blank" rel="noopener noreferrer"
+                  class="text-decoration-none inherit-clr"> sales@manageyourtrip.com</a></li>
+            </ul>
           </div>
         </div>
       </div>
-    </footer>
+    </div>
+  </footer>
 
-    <!-- Footer Html End Here  -->
+  <!-- Footer Html End Here  -->
 
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
-      crossorigin="anonymous"
-    ></script>
-    <!-- Swiper JS -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-    <script>
-      // current year
-      document.querySelector(".current-year").textContent = '2012 - ' + new Date().getFullYear();
-      
-      let ham = document.querySelector(".ham");
-      let hamburgerMenu = document.querySelector(".hamburger-menu");
-      let body = document.querySelector("body");
-      ham.addEventListener("click", function () {
-        hamburgerMenu.classList.toggle("open");
-        body.classList.toggle("body-scroll");
-      });
-    </script>
-    <script>
-      let overLayBG = document.querySelector("#overlay-bg");
-      let overLay = document.querySelector(".overLay");
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+    crossorigin="anonymous"></script>
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  <script>
+    // current year
+    document.querySelector(".current-year").textContent = '2012 - ' + new Date().getFullYear();
 
-      function adjustHeight() {
-        // Get height of the overLayBG div
-        const sourceHeight = overLayBG.clientHeight;
-        // Apply height to the overLay div
-        overLay.style.height = `${sourceHeight}px`;
-      }
-      adjustHeight();
-      window.addEventListener("resize", adjustHeight);
-      window.addEventListener("refresh", adjustHeight);
-    </script>
-    <script>
-      var swiper = new Swiper(".logo-slider", {
-        // slidesPerView: 6,
-        // spaceBetween: 30,
-        // centeredSlides: true,
-        loop: true,
-        autoplay: {
-          delay: 1000,
-          disableOnInteraction: false,
+    let ham = document.querySelector(".ham");
+    let hamburgerMenu = document.querySelector(".hamburger-menu");
+    let body = document.querySelector("body");
+    ham.addEventListener("click", function () {
+      hamburgerMenu.classList.toggle("open");
+      body.classList.toggle("body-scroll");
+    });
+  </script>
+  <script>
+    let overLayBG = document.querySelector("#overlay-bg");
+    let overLay = document.querySelector(".overLay");
+
+    function adjustHeight() {
+      // Get height of the overLayBG div
+      const sourceHeight = overLayBG.clientHeight;
+      // Apply height to the overLay div
+      overLay.style.height = `${sourceHeight}px`;
+    }
+    adjustHeight();
+    window.addEventListener("resize", adjustHeight);
+    window.addEventListener("refresh", adjustHeight);
+  </script>
+  <script>
+    var swiper = new Swiper(".logo-slider", {
+      // slidesPerView: 6,
+      // spaceBetween: 30,
+      // centeredSlides: true,
+      loop: true,
+      autoplay: {
+        delay: 1000,
+        disableOnInteraction: false,
+      },
+      breakpoints: {
+        200: {
+          slidesPerView: 1,
         },
-        breakpoints: {
-          200: {
-            slidesPerView: 1,
-          },
-          450: {
-            slidesPerView: 2,
-            spaceBetween: 20,
-          },
-          640: {
-            slidesPerView: 3,
-            spaceBetween: 20,
-          },
-          768: {
-            slidesPerView: 3,
-            spaceBetween: 20,
-          },
-          1024: {
-            slidesPerView: 4,
-            spaceBetween: 20,
-          },
+        450: {
+          slidesPerView: 2,
+          spaceBetween: 20,
         },
-      });
-    </script>
-    <script>
-      //Second swiper
-      var swiper = new Swiper(".mySwiper2", {
-        slidesPerView: 2,
-        spaceBetween: 30,
-        // centeredSlides: true,
-        loop: true,
-        autoplay: {
-          delay: 1000,
-          disableOnInteraction: false,
+        640: {
+          slidesPerView: 3,
+          spaceBetween: 20,
         },
-        navigation: {
-          nextEl: ".next-arrow",
-          prevEl: ".prev-arrow",
+        768: {
+          slidesPerView: 3,
+          spaceBetween: 20,
         },
-        breakpoints: {
-          200: {
-            slidesPerView: 1,
-          },
-          550: {
-            slidesPerView: 1,
-            spaceBetween: 0,
-          },
-          640: {
-            slidesPerView: 1,
-            spaceBetween: 20,
-          },
-          768: {
-            slidesPerView: 2,
-            spaceBetween: 20,
-          },
-          1024: {
-            slidesPerView: 2,
-            spaceBetween: 30,
-          },
+        1024: {
+          slidesPerView: 4,
+          spaceBetween: 20,
         },
-      });
-    </script>
-  </body>
+      },
+    });
+  </script>
+  <script>
+    //Second swiper
+    var swiper = new Swiper(".mySwiper2", {
+      slidesPerView: 2,
+      spaceBetween: 30,
+      // centeredSlides: true,
+      loop: true,
+      autoplay: {
+        delay: 1000,
+        disableOnInteraction: false,
+      },
+      navigation: {
+        nextEl: ".next-arrow",
+        prevEl: ".prev-arrow",
+      },
+      breakpoints: {
+        200: {
+          slidesPerView: 1,
+        },
+        550: {
+          slidesPerView: 1,
+          spaceBetween: 0,
+        },
+        640: {
+          slidesPerView: 1,
+          spaceBetween: 20,
+        },
+        768: {
+          slidesPerView: 2,
+          spaceBetween: 20,
+        },
+        1024: {
+          slidesPerView: 2,
+          spaceBetween: 30,
+        },
+      },
+    });
+  </script>
+</body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NJWD4N4"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
 </html>
