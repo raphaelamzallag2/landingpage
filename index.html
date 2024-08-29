@@ -36,12 +36,26 @@
 </head>
 
 <body>
-  <div class="g-recaptcha" data-sitekey="6LeY0CwqAAAAAN_gnWMOP6qzTyVh_w6h7CLfX81R" data-callback="onSubmit"
-    data-size="invisible"></div>
   <!-- Header Html Start Here  -->
   <div id="overlay-bg">
     <header>
       <div class="container">
+        <div class="modal" id="recaptcha-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Please verify</h1>
+              </div>
+              <div class="modal-body">
+                <div class="g-recaptcha" data-sitekey="6Let1zEqAAAAAP6N_pIlLRLHL0J-nUQ-TqQ4Y34c"
+                  data-callback="onRecaptchaSuccess"></div>
+              </div>
+              <div class="modal-footer">
+                <button id="recaptcha-close" class="modal-close btn">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
         <div class="row align-items-center">
           <div class="col-8 d-flex">
             <div class="header-logo">
@@ -70,7 +84,7 @@
             </svg>
           </div>
           <div class="col-4 book-demo-btn d-flex justify-content-end">
-            <a href="https://manageyourtrip.typeform.com/to/Idly1EVr" class="book-demo text-decoration-none">Book Your
+            <a href="#" class="book-demo text-decoration-none book-demos">Book Your
               Demo</a>
           </div>
           <div class="hamburger-menu">
@@ -110,8 +124,7 @@
               conversion rates in just 3 months!
             </p>
             <div class="text-center text-sm-start">
-              <a href="https://manageyourtrip.typeform.com/to/Idly1EVr"
-                class="banner-book-demo text-decoration-none">Book Your Demo</a>
+              <a href="#" class="banner-book-demo text-decoration-none book-demos">Book Your Demo</a>
             </div>
           </div>
           <div class="col-lg-5">
@@ -666,8 +679,7 @@
       <img src="./Images/report-chart2.svg" alt="connect" class="connect" />
       <div class="text-center w-50">
         <p>Ready to take your business to the next level?</p>
-        <a href="https://manageyourtrip.typeform.com/to/Idly1EVr" class="book-demo text-decoration-none"
-          rel="noopener">Book Your Demo</a>
+        <a href="#" class="book-demo text-decoration-none book-demos" rel="noopener">Book Your Demo</a>
       </div>
       <img src="./Images/report-chart.svg" alt="report-chart" class="report" />
     </div>
@@ -732,12 +744,9 @@
     crossorigin="anonymous"></script>
   <!-- Swiper JS -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
   <script>
-
-    grecaptcha.ready(function () {
-      grecaptcha.execute();
-    });
-
     // current year
     document.querySelector(".current-year").textContent = '2012 - ' + new Date().getFullYear();
 
@@ -833,6 +842,43 @@
         },
       },
     });
+  </script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var modal = document.getElementById('recaptcha-modal');
+
+      // Event listener for all buttons on the page
+      // document.querySelectorAll('button').forEach(function (button) {
+      //   button.addEventListener('click', function (event) {
+      //     alert();
+      //     event.preventDefault();
+      //     // Open the modal
+      //     modal.style.display = "block";
+      //   });
+      // });
+
+      // Close button
+      document.getElementById('recaptcha-close').addEventListener('click', function () {
+        modal.style.display = "none";
+      });
+
+      // Close modal when clicking outside of it
+      window.onclick = function (event) {
+        if (event.target == modal) {
+          modal.style.display = "none";
+        }
+      };
+    });
+
+    $('.book-demos').click(function (event) {
+      var modal = document.getElementById('recaptcha-modal');
+      event.preventDefault();
+      modal.style.display = "block";
+    });
+
+    function onRecaptchaSuccess(token) {
+      window.location.href = "https://manageyourtrip.typeform.com/to/Idly1EVr";
+    }
   </script>
 </body>
 <!-- Google Tag Manager (noscript) -->
